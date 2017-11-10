@@ -1,0 +1,177 @@
+.header {
+  width: 100%;
+
+  &__holder {
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
+    z-index: 1;
+    border-bottom: 2px solid #fff;
+
+    @include apply-to(less-than, $tablet) {
+      border: none;
+    }
+  }
+}
+
+.logo {
+  margin: 0;
+
+  a {
+    display: block;
+  }
+
+  img {
+    display: block;
+  }
+}
+
+.main-nav {
+  display: flex;
+  margin-left: auto;
+
+  &__opener {
+    display: none;
+    z-index: 3;
+    width: 18px;
+    height: 14px;
+    line-height: 14px;
+    position: relative;
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    outline: none;
+    display: none;
+    background: none;
+    color: $main-color;
+    cursor: pointer;
+
+    &-dash {
+      display: block;
+      background: currentColor;
+      height: 2px;
+      width: 100%;
+      transition: all ease-in .5s;
+
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: currentColor;
+        transition: all ease-in .5s;
+      }
+
+      &::before {
+        top: 0;
+      }
+
+      &::after {
+        bottom: 0;
+      }
+
+      .active & {
+        position: relative;
+        background: none;
+        color: #637280;
+
+        &::before {
+          transform: rotate(45deg);
+          top: 0;
+        }
+
+        &::after {
+          transform: rotate(-45deg);
+          bottom: 0;
+        }
+      }
+    }
+
+    @include apply-to(less-than, $tablet) {
+      display: block;
+    }
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+    font: bold 15px/32px $main-font;
+    transition: right ease-in .5s;
+
+    @include apply-to(less-than, $tablet) {
+      position: absolute;
+      top: 0;
+      width: 320px;
+      right: -110%;
+      background: #fff;
+      flex-direction: column;
+      z-index: 2;
+      padding: 61px 20px;
+      font-size: 22px;
+      line-height: 63px;
+      align-items: flex-start;
+      box-shadow: 0 0 5px rgba(#000, .3);
+    }
+
+    .active & {
+      @include apply-to(less-than, $tablet) {
+        right: 0;
+      }
+    }
+  }
+}
+
+.nav-list {
+  display: flex;
+
+  @include apply-to(less-than, $tablet) {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  &__item {
+    margin-left: 22px;
+
+    @include apply-to(less-than, $tablet) {
+      border-bottom: 1px solid #e5e5e5;
+      margin: 0;
+    }
+  }
+
+  &__link {
+    color: #000;
+
+    @include apply-to(less-than, $tablet) {
+      padding: 0 14px;
+    }
+
+    &:hover,
+    .active {
+      text-decoration: none;
+      color: $main-color;
+    }
+  }
+}
+
+.login {
+  color: $main-color;
+  background: #fff;
+  border-radius: 3px;
+  padding: 0 12px;
+  margin-left: 20px;
+  box-shadow: 0 0 5px rgba(#000, .3);
+
+  @include apply-to(less-than, $tablet) {
+    background: none;
+    box-shadow: none;
+    margin: 0;
+  }
+
+  &:hover {
+    text-decoration: none;
+    box-shadow: 0 0 10px rgba(#000, .3);
+    color: rgba($main-color, .9);
+  }
+}

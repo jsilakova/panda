@@ -1,0 +1,65 @@
+.promo {
+  &__banner {
+    position: relative;
+    margin-bottom: 17px;
+
+    &:before {
+      content: '';
+      top: -72px;
+      left: -100%;
+      right: -100%;
+      height: 100%;
+      background: #f7f8ff;
+      position: absolute;
+      z-index: -1;
+
+      @include apply-to(less-than, $tablet) {
+        left: -20px;
+        right: -20px;
+      }
+    }
+
+    &:after {
+      content: '';
+      bottom: -28%;
+      left: -100%;
+      right: -100%;
+      height: 100%;
+      background: #f7f8ff;
+      position: absolute;
+      transform: skewY(-9.5deg);
+      z-index: -1;
+
+      @include apply-to(less-than, $tablet) {
+        left: -20px;
+        right: -20px;
+      }
+    }
+  }
+  &__cards {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    margin-bottom: 60px;
+
+    @include apply-to(less-than, $tablet) {
+      flex-direction: column;
+    }
+  }
+  &__partners {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    @include apply-to(less-than, $tablet) {
+      justify-content: center;
+    }
+
+    &-item {
+      @include apply-to(less-than, $tablet) {
+        margin: 0 10px 20px;
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+doctype html
+html
+  include html-head
+  body
+    include ../base/mixins
+    .wrapper
+      include ../components/_header
+      main.main
+        block content
+      include ../components/_footer
+    script(src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous")
+    script(src="js/main.js")

@@ -1,0 +1,25 @@
+.button-link {
+  background: $main-color;
+  min-width: 126px;
+  padding: 5px 19px;
+  border-radius: 5px;
+  color: #fff;
+  text-align: center;
+  box-shadow: 0 0 5px rgba(#000, .3);
+
+  &:hover {
+    text-decoration: none;
+    background: rgba($main-color, .9);
+    box-shadow: 0 0 10px rgba(#000, .3);
+  }
+
+  &--invert {
+    color: $main-color;
+    background: #fff;
+
+    &:hover {
+      color: rgba($main-color, .9);
+      background: #fff;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+@mixin apply-to($comparator, $device) {
+  $extrema: null;
+
+  @if $comparator == less-than {
+    $extrema: max;
+  }
+
+  @if $comparator == greater-than {
+    $extrema: min
+  }
+
+  @media only screen and (#{$extrema}-width: $device) {
+    @content;
+  }
+}

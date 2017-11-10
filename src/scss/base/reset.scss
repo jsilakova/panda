@@ -1,0 +1,153 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  &::selection {
+    background: hsl(hue($main-color), 45%, 90%);
+  }
+}
+ul, ol, dl, p, h1, h2, h3, h4, h5, h6, address, form, table, blockquote, applet, embed, object, iframe, frameset {margin: 0 0 14px;}
+html, body, div, span, applet, embed, object, iframe, frameset,
+p, q, blockquote, sub, sup, a, abbr, acronym, font, img, small, center,
+h1, h2, h3, h4, h5, h6, b, strong, big, u, ins,
+i, cite, em, var, dfn, address, s, strike, del,
+dl, dt, dd, ol, ul, li, pre, code, kbd, samp, tt,
+fieldset, legend, form, label, table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, footer, header,
+hgroup, menu, nav, section, summary, time, mark, audio, video {
+  border: 0;
+  background: none;
+}
+html {
+  height: 100%;
+  display: flex;
+}
+body {
+  color: #7b7f84;
+  font: 14px/1.2em $main-font;
+  background: #fff;
+  display: flex;
+  width: 100%;
+  flex: 1;
+  flex-direction: column;
+  overflow-x: hidden;
+
+  @include apply-to(less-than, $tablet) {
+    overflow: visible;
+  }
+}
+a {
+  text-decoration: none;
+  color: #4a90e2;
+  outline: none;
+  transition: $main-transition;
+}
+a:hover {text-decoration: underline;}
+a:active {background-color: transparent;}
+input, textarea, select {
+  font: 100% $main-font;
+  vertical-align: middle;
+  color: #000;
+  overflow: auto;
+  outline: none;
+  order: 2;
+}
+textarea {resize: none;}
+label {
+  order: 1;
+  color: #000;
+}
+button, input {
+  width: auto;
+  overflow: visible;
+  outline: none;
+}
+h1, h2, h3, h4, h5, h6, b, strong, th {
+  font-weight: bold;
+  color: #000;
+}
+h1 {font-size: 200%;}
+h2 {font-size: 150%;}
+h3 {font-size: 120%;}
+h4 {font-size: 110%;}
+h5 {font-size: 100%;}
+h6 {font-size: 90%;}
+i, cite, em, var, dfn, address {font-style: italic;}
+u, ins {text-decoration: underline;}
+s, strike, del {text-decoration: line-through;}
+blockquote, blockquote:before, blockquote:after, q, q:before, q:after {quotes: none;}
+blockquote:before, blockquote:after, q:before, q:after {content: '';}
+table, caption, tbody, tfoot, thead, tr, th, td {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+th, td {
+  border: 1px solid #ccc;
+  padding: 3px 7px;
+  text-align: left;
+  vertical-align: top;
+}
+th {
+  border-color: #999;
+  text-align: center;
+  vertical-align: middle;
+}
+ul {margin: 0;list-style: none;}
+header, footer, article, section, nav, figure, aside, main { display: block; }
+figure { margin: 0; padding: 0; }
+input[type="submit"] {
+  margin-right: auto;
+  background: $main-color;
+  border: none;
+  min-width: 120px;
+  padding: 0 10px;
+  height: 40px;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  font: 18px/22px $main-font;
+}
+input[type="submit"]:focus,
+input[type="submit"]:hover {
+  background: rgba($main-color, .9);
+}
+textarea,
+input[type="mail"],
+input[type="search"],
+input[type="text"] {
+  margin: 0;
+  padding: 7px 10px;
+  box-sizing: border-box;
+  color: #868f8f;
+  border: 2px solid #ecebeb;
+  background: #fff;
+  font: 16px/22px $main-font;
+}
+textarea:focus,
+input[type="mail"]:focus,
+input[type="search"]:focus,
+input[type="text"]:focus {
+  border-color: hsl(hue($main-color), 45%, 90%);
+  color: #000;
+  outline: none;
+}
+input[type="search"] {-webkit-appearance: none;}
+input[type="search"]::-webkit-search-cancel-button {-webkit-appearance: none;}
+input[type="search"]::-webkit-search-decoration {display: none;}
+::-webkit-input-placeholder { /* WebKit browsers */
+  color: #868f8f;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+  color: #868f8f;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+  color: #868f8f;
+  opacity: 1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+  color: #868f8f;
+}
+::-ms-clear {
+  display: none;
+}

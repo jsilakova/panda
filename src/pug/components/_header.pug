@@ -1,0 +1,19 @@
+- var navList = ['Solutions', 'Company', 'Academy', 'Blog', 'Pricing']
+
+mixin navListItem
+  each val in navList
+    li.nav-list__item
+      a.nav-list__link(href="#")= val
+
+header.header
+  .header__holder
+    h1.logo
+      a(href="#" title="PandaDoc")
+        img(src="images/logos/logo.svg")
+    nav.main-nav.js-menu
+      button.main-nav__opener.js-menu-opener
+        span.main-nav__opener-dash
+      .main-nav__container.active
+        ul.nav-list
+          +navListItem
+        a.login(href="#") Log in

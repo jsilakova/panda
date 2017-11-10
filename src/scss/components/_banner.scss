@@ -1,0 +1,81 @@
+.banner {
+  display: flex;
+  justify-content: center;
+  padding: 13% 0 20%;
+
+  @include apply-to(less-than, $pc) {
+    padding: 8% 0 14%;
+  }
+
+  @include apply-to(less-than, $tablet) {
+    display: block;
+    padding-bottom: 0;
+
+    &:after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+  }
+
+  &__image {
+    position: absolute;
+    margin-left: 30px;
+
+    @include apply-to(less-than, $pc) {
+      margin: 0;
+      top: 0;
+      right: -16%;
+      width: 130%;
+      height: auto;
+    }
+
+    @include apply-to(less-than, $tablet) {
+      width: 640px;
+      position: static;
+      float: right;
+      margin-left: -320px;
+      margin-right: -65px;
+    }
+  }
+
+  &__content {
+    margin-right: auto;
+    z-index: 1;
+    max-width: 460px;
+
+    @include apply-to(less-than, $pc) {
+      max-width: 50%;
+    }
+
+    @include apply-to(less-than, $tablet) {
+      max-width: 100%;
+    }
+  }
+
+  &__info {
+    color: #82868b;
+    font-size: 16px;
+    padding-bottom: 8px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #eaebf2;
+  }
+
+  &__title {
+    margin: 0 0 40px;
+    font: 45px/1.12em $second-font;
+
+    @include apply-to(less-than, $pc) {
+      font-size: 30px;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    font: 17px/30px $main-font;
+
+    a {
+      margin-right: 10px;
+    }
+  }
+}
