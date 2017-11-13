@@ -1,0 +1,198 @@
+.features {
+  margin-bottom: 152px;
+  overflow: hidden;
+
+  @include apply-to(less-than, $pc) {
+    margin-bottom: 50px;
+  }
+
+  @include apply-to(less-than, $tablet) {
+    margin: 0;
+  }
+
+  &__title {
+    @include center-content;
+    margin-bottom: 19px;
+    text-align: center;
+    font: 40px/1.2em $main-font;
+
+    @include apply-to(less-than, $pc) {
+      font-size: 35px;
+      margin-bottom: 1em;
+    }
+
+    @include apply-to(less-than, $mobile) {
+      font-size: 22px;
+    }
+  }
+
+  &__content {
+    @include center-content;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+
+    &:after {
+      content: '';
+      position: absolute;
+      margin: 0 auto;
+      height: 2px;
+      background: #f9f9f9;
+      bottom: 0;
+      width: 100vw;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      width: 2px;
+      background: #f9f9f9;
+      bottom: 0;
+      z-index: -1;
+      height: 100%;
+
+      @include apply-to(less-than, $tablet) {
+        content: none;
+      }
+    }
+  }
+
+  &__tab {
+    width: 100%;
+    display: none;
+    flex-wrap: wrap;
+  }
+
+  &__text {
+    margin: 0 0 33px;
+    max-width: 320px;
+
+    @include apply-to(less-than, $pc) {
+      margin-bottom: 1em;
+    }
+
+    @include apply-to(less-than, $tablet) {
+      max-width: 100%;
+    }
+  }
+}
+
+.tab-list {
+  @include center-content;
+  display: flex;
+  margin-bottom: 60px;
+  justify-content: center;
+
+  @include apply-to(less-than, $tablet) {
+    flex-direction: column;
+    margin: 0;
+  }
+
+  @include apply-to(less-than, $mobile) {
+    margin: 0 0 20px;
+  }
+
+  &__item {
+    margin: 0 10px;
+  }
+
+  &__link {
+    display: block;
+    font-size: 15px;
+    line-height: 30px;
+    border-radius: 15px;
+    padding: 0 5px;
+
+    @include apply-to(less-than, $mobile) {
+      text-align: center;
+    }
+
+    .active & {
+      padding: 0 20px;
+      margin: 0 -16px;
+      text-decoration: none;
+      background: #4a90e2;
+      color: #fff;
+    } 
+  }
+}
+
+#tab-1 {
+ display: flex;
+}
+
+.features-item {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+
+  &:before {
+    content: '';
+    position: absolute;
+    height: 2px;
+    background: #f9f9f9;
+    width: 100vw;
+  }
+
+  @include apply-to(less-than, $tablet) {
+    width: 100%;
+  }
+
+  &__content {
+    max-width: 360px;
+    padding-top: 63px;
+    padding-bottom: 40px;
+    box-sizing: content-box;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+
+    @include apply-to(less-than, $tablet) {
+      max-width: 100%;
+      padding: 10px 0;
+    }
+
+    @include apply-to(less-than, $mobile) {
+      padding: 50px 0;
+    }
+
+    .features-item:nth-child(even) & {
+      padding-left: 13%;
+
+      @include apply-to(less-than, $pc) {
+        padding-left: 20px;
+      }
+
+      @include apply-to(less-than, $tablet) {
+        padding-left: 0;
+      }
+    }
+  }
+
+  &__title {
+    margin: 0 0 22px;
+    font: 30px/1.2em $main-font;
+    
+    @include apply-to(less-than, $tablet) {
+      font-size:22px;
+    }
+
+  }
+
+  &__text {
+    margin: 0 0 20px;
+
+    &:last-of-type {
+      flex: 1;
+    }
+  }
+
+  &__more {
+    padding-top: 46px;
+
+    @include apply-to(less-than, $tablet) {
+      padding: 0;
+    }
+  }
+}

@@ -1,10 +1,12 @@
 .header {
   width: 100%;
+  background: #f7f8ff;
 
   &__holder {
+    @include center-content;
     display: flex;
     align-items: center;
-    padding: 20px 0;
+    padding: 20px;
     z-index: 1;
     border-bottom: 2px solid #fff;
 
@@ -29,6 +31,10 @@
 .main-nav {
   display: flex;
   margin-left: auto;
+
+  @include apply-to(less-than, $tablet) {
+    margin-right: 4px;
+  }
 
   &__opener {
     display: none;
@@ -97,14 +103,13 @@
   &__container {
     display: flex;
     align-items: center;
-    font: bold 15px/32px $main-font;
-    transition: right ease-in .5s;
+    transition: top ease-in .5s;
 
     @include apply-to(less-than, $tablet) {
       position: absolute;
-      top: 0;
+      top: -100%;
       width: 320px;
-      right: -110%;
+      right: 0;
       background: #fff;
       flex-direction: column;
       z-index: 2;
@@ -115,9 +120,13 @@
       box-shadow: 0 0 5px rgba(#000, .3);
     }
 
+    @include apply-to(less-than, $mobile-landscape) {
+      width: 100%;
+    }
+
     .active & {
       @include apply-to(less-than, $tablet) {
-        right: 0;
+        top: 0;
       }
     }
   }
@@ -125,18 +134,21 @@
 
 .nav-list {
   display: flex;
+  font: 15px/29px $main-font;
 
   @include apply-to(less-than, $tablet) {
+    font-size: 22px;
+    line-height: 63px;
     flex-direction: column;
     width: 100%;
   }
 
   &__item {
-    margin-left: 22px;
+    padding: 1px 0 1px 20px;
 
     @include apply-to(less-than, $tablet) {
       border-bottom: 1px solid #e5e5e5;
-      margin: 0;
+      padding: 0;
     }
   }
 
@@ -159,14 +171,18 @@
   color: $main-color;
   background: #fff;
   border-radius: 3px;
-  padding: 0 12px;
-  margin-left: 20px;
-  box-shadow: 0 0 5px rgba(#000, .3);
+  padding: 2px 10px;
+  margin: 0 2px 0 22px;
+  font: 15px/27px $second-font;
+  box-shadow: 0 2px 5px rgba(#000, .2);
 
   @include apply-to(less-than, $tablet) {
     background: none;
     box-shadow: none;
     margin: 0;
+    padding: 0 14px;
+    font-size: 22px;
+    line-height: 63px;
   }
 
   &:hover {

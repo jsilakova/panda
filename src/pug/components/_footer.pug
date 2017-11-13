@@ -1,5 +1,5 @@
 - var solutions = ['Proposal Software', 'Contract Management', 'Sales Enablement', 'Electronic Signatures', 'CPQ Software', 'Features', 'Integrations', 'Security', 'API & SDK']
-- var templates = ['Proposals', 'Invoices', 'Quotes', 'Business plans', 'Receipts', 'Standard documents', 'Other documents']
+- var templates = ['Proposals', 'Invoices', 'Quotes', 'Business Plans', 'Receipts', 'Standart Documents', 'Other documents']
 - var resources = ['Help center', 'Webinars', 'PandaDoc Academy', 'Press', 'Privacy policy', 'Payment policy', 'Terms of use', 'Blog']
 
 mixin footerList(listName, title)
@@ -12,8 +12,8 @@ mixin footerList(listName, title)
 
 footer.footer
     .footer__content
-        .footer__row
-            +footerList(solutions, 'Solutions')
+        .footer__row.footer__columns
+            +footerList(solutions, 'Products')
             +footerList(templates, 'Templates')
             +footerList(resources, 'Resources')
         .footer__row
@@ -23,5 +23,5 @@ footer.footer
                 a.app-links__link(href="#")
                   img(src="images/icons/btn-google-play.svg")
             .copyright
-                span PandaDoc
+                span PandaDoc &reg;
                 span All rights reserved

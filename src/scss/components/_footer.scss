@@ -1,53 +1,92 @@
 .footer {
+  width: 100%;
+  padding-top: 79px;
+  background: #f7f8f8;
+
+  @include apply-to(less-than, $tablet) {
+    padding: 34px 0 15px;
+  }
+
+  &__content {
+    max-width: 962px;
+    padding: 0 20px;
+    margin: 0 auto;
+  }
+
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
     width: 100%;
+    margin-bottom: 50px;
+    justify-content: space-between;
 
-    &__content {
-        display: flex;
-        flex-direction: column;
+    @include apply-to(less-than, $tablet) {
+      margin: 0;
     }
+  }
 
-    &__row {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
+  &__columns {
+    flex-wrap: nowrap;
+  }
+
+  &__column {
+    max-width: 30.5%;
+    min-width: 250px;
+    flex: 1;
+    margin-bottom: 20px;
+
+    @include apply-to(less-than, $tablet) {
+      display: none;
     }
+  }
 
-    &__column {
-        max-width: 30%;
-        min-width: 250px;
-        flex: 1;
-        margin: 0 auto;
+  &__title {
+    display: block;
+    margin-bottom: 8px;
+  }
 
-        @include apply-to(less-than, $tablet) {
-          display: none;
-        }
-    }
+  &__item {
+    margin-bottom: 8px;
 
-    &__item {
-      a {
-        color: #8b8e93;
+    a {
+      color: #8b8e93;
 
-        &:hover {
-          text-decoration: none;
-          color: rgba(#47b972, .9);
-        }
+      &:hover {
+        text-decoration: none;
+        color: rgba(#47b972, .9);
       }
     }
+  }
 }
 
 .app-links {
   display: flex;
 
+  @include apply-to(less-than, $tablet) {
+    margin-bottom: 33px;
+  }
+
   &__link {
     display: block;
+    margin-right: 10px;
   }
 
   img {
     display: block;
+
+    @include apply-to(less-than, $tablet) {
+      max-width: 108px;
+    }
   }
 }
 .copyright {
-  width: 30%;
+  width: 30.7%;
+  font-size: 12px;
+  line-height: 20px;
+
+  @include apply-to(less-than, $tablet) {
+    width: 100%;
+  }
 
   span {
     display: block;

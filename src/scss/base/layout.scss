@@ -1,13 +1,6 @@
-.wrapper {
-  max-width: 962px;
-  padding: 0 20px;
-  margin: 0 auto;
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-}
 .main {
   flex: 1 0 auto;
+  width: 100%;
 }
 .content {
   display: flex;

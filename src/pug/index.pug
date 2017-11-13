@@ -1,7 +1,6 @@
 extends base/default
 
 block content
-  - var features = {'Advanced': 'lorem', 'Easy': 'lorem', 'Electronic': 'lorem', 'Adva': 'lorem'}
   - var partners = {'hubspot': 'hubspot', 'segment': 'segment', 'pubnub': 'pubnub', 'datanyze': 'datanyze',}
 
   .content
@@ -12,7 +11,7 @@ block content
             .banner__info Reason #1
             h2.banner__title Document platform that boosts your company's revenue
             .banner__buttons
-              a.button-link(href="#") Start a trial
+              a.button-link.js-modal-opener(href="#") Start a trial
               a.button-link.button-link--invert(href="#") Request a demo
           img.banner__image(src="images/images/hero.png")
       .promo__cards
@@ -21,42 +20,55 @@ block content
             img.card__icon(src="images/icons/icon-1.svg")
             h3.card__title Beautiful proposals that close fast
             p.card__text PandaDoc is built for companies looking for a proposal software that helps them grow faster.
+            span.card__ico &#8594;
           a.card__link(href="#")
         .card
           .card__content
             img.card__icon(src="images/icons/icon-2.svg")
             h3.card__title Full contract lifecycle management
             p.card__text Save time and reduce errors during your contract management process with PandaDoc
+            span.card__ico &#8594;
           a.card__link(href="#")
       .promo__partners
         each val, key in partners
           img.promo__partners-item(src='images/logos/' + val + '.svg', alt=key)
 
     section.features
-      h2.features__title
-      .features__list
-        ul.tabs
-          li= adsf
+      h2.features__title Top features
+      ul.tab-list
+        li.tab-list__item.active
+          a.tab-list__link.js-tab-link(href="#tab-1") Proposals & Qoutes
+        li.tab-list__item
+          a.tab-list__link.js-tab-link(href="#tab-2") Team Management
+        li.tab-list__item
+          a.tab-list__link.js-tab-link(href="#tab-3") Content Management
       .features__content
-        each val, key in features
-          .features__item
-            h3= key
-            p= val
+        each tab, index in locals.features
+          .features__tab.js-tab(id="tab-" + (index + 1))
+            each item in tab
+              .features-item
+                .features-item__content
+                  h3.features-item__title= item.title
+                  p.features-item__text= item.text
+                  .features-item__more
+                    a(href="#") Learn more &rarr;
 
     section.contact
-      .contact__column
-        h2.contact__title Keep in touch
-        p.contact__text Feel free to contact us with questions, potential partnerships, media inquiries, or just say "Hi!"
-        p.contact__text
-          | To keep up to date with PandaDoc, check out <a href="#">our blog</a>
-      .contact__column
-        form.contact__form(action="#")
-          fieldset
-            .contact__form-row
-              input(type='text', id="name",  value="", required="")
-              label.contact__label(for="name") Your name
-            .contact__form-row
-              textarea.contact__textarea(rows="4", id="message", required="")
-              label.contact__label(for="message") Message
-            .contact__form-row
-              input(type="submit", value="Submit")
+      .contact__row
+        .contact__column
+          h2.contact__title Keep in touch!
+          p.contact__text Feel free to contact us with questions, potential partnerships, media inquiries, or just say "Hi!"
+          p.contact__text
+            | To keep up to date with PandaDoc, check out <a href="#">our blog</a>
+        .contact__column
+          form.contact__form(action="#")
+            fieldset
+              .contact__form-row
+                input(type='text', id="name",  value="", required="")
+                label.contact__label(for="name") Your name
+              .contact__form-row
+                textarea.contact__textarea(rows="4", id="message", required="")
+                label.contact__label(for="message") Message
+              .contact__form-row
+                input(type="submit", value="Submit")
+      img.contact__image(src="images/images/footer.png")

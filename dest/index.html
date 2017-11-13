@@ -6,82 +6,156 @@
     <link href="css/all.css" rel="stylesheet">
   </head>
   <body>
-    <div class="wrapper">
-      <header class="header">
-        <div class="header__holder">
-          <h1 class="logo"><a href="#" title="PandaDoc"><img src="images/logos/logo.svg"></a></h1>
-          <nav class="main-nav js-menu">
-            <button class="main-nav__opener js-menu-opener"><span class="main-nav__opener-dash"></span></button>
-            <div class="main-nav__container active">
-              <ul class="nav-list">
-                      <li class="nav-list__item"><a class="nav-list__link" href="#">Solutions</a></li>
-                      <li class="nav-list__item"><a class="nav-list__link" href="#">Company</a></li>
-                      <li class="nav-list__item"><a class="nav-list__link" href="#">Academy</a></li>
-                      <li class="nav-list__item"><a class="nav-list__link" href="#">Blog</a></li>
-                      <li class="nav-list__item"><a class="nav-list__link" href="#">Pricing</a></li>
-              </ul><a class="login" href="#">Log in</a>
+    <header class="header">
+      <div class="header__holder">
+        <h1 class="logo"><a href="#" title="PandaDoc"><img src="images/logos/logo.svg"></a></h1>
+        <nav class="main-nav js-menu">
+          <button class="main-nav__opener js-menu-opener"><span class="main-nav__opener-dash"></span></button>
+          <div class="main-nav__container">
+            <ul class="nav-list">
+                  <li class="nav-list__item"><a class="nav-list__link" href="#">Solutions</a></li>
+                  <li class="nav-list__item"><a class="nav-list__link" href="#">Company</a></li>
+                  <li class="nav-list__item"><a class="nav-list__link" href="#">Academy</a></li>
+                  <li class="nav-list__item"><a class="nav-list__link" href="#">Blog</a></li>
+                  <li class="nav-list__item"><a class="nav-list__link" href="#">Pricing</a></li>
+            </ul><a class="login" href="#">Log in</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main class="main">
+      <div class="content">
+        <section class="promo">
+          <div class="promo__banner">
+            <div class="banner">
+              <div class="banner__content">
+                <div class="banner__info">Reason #1</div>
+                <h2 class="banner__title">Document platform that boosts your company's revenue</h2>
+                <div class="banner__buttons"><a class="button-link js-modal-opener" href="#">Start a trial</a><a class="button-link button-link--invert" href="#">Request a demo</a></div>
+              </div><img class="banner__image" src="images/images/hero.png">
             </div>
-          </nav>
-        </div>
-      </header>
-      <main class="main">
-        <div class="content">
-          <section class="promo">
-            <div class="promo__banner">
-              <div class="banner">
-                <div class="banner__content">
-                  <div class="banner__info">Reason #1</div>
-                  <h2 class="banner__title">Document platform that boosts your company's revenue</h2>
-                  <div class="banner__buttons"><a class="button-link" href="#">Start a trial</a><a class="button-link button-link--invert" href="#">Request a demo</a></div>
-                </div><img class="banner__image" src="images/images/hero.png">
+          </div>
+          <div class="promo__cards">
+            <div class="card">
+              <div class="card__content"><img class="card__icon" src="images/icons/icon-1.svg">
+                <h3 class="card__title">Beautiful proposals that close fast</h3>
+                <p class="card__text">PandaDoc is built for companies looking for a proposal software that helps them grow faster.</p><span class="card__ico">&#8594;</span>
+              </div><a class="card__link" href="#"></a>
+            </div>
+            <div class="card">
+              <div class="card__content"><img class="card__icon" src="images/icons/icon-2.svg">
+                <h3 class="card__title">Full contract lifecycle management</h3>
+                <p class="card__text">Save time and reduce errors during your contract management process with PandaDoc</p><span class="card__ico">&#8594;</span>
+              </div><a class="card__link" href="#"></a>
+            </div>
+          </div>
+          <div class="promo__partners"><img class="promo__partners-item" src="images/logos/hubspot.svg" alt="hubspot"><img class="promo__partners-item" src="images/logos/segment.svg" alt="segment"><img class="promo__partners-item" src="images/logos/pubnub.svg" alt="pubnub"><img class="promo__partners-item" src="images/logos/datanyze.svg" alt="datanyze">
+          </div>
+        </section>
+        <section class="features">
+          <h2 class="features__title">Top features</h2>
+          <ul class="tab-list">
+            <li class="tab-list__item active"><a class="tab-list__link js-tab-link" href="#tab-1">Proposals & Qoutes</a></li>
+            <li class="tab-list__item"><a class="tab-list__link js-tab-link" href="#tab-2">Team Management</a></li>
+            <li class="tab-list__item"><a class="tab-list__link js-tab-link" href="#tab-3">Content Management</a></li>
+          </ul>
+          <div class="features__content">
+            <div class="features__tab js-tab" id="tab-1">
+              <div class="features-item">
+                <div class="features-item__content">
+                  <h3 class="features-item__title">Advanced analytics</h3>
+                  <p class="features-item__text">PandaDoc you will know Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui dicta minus molestiae vel beatae natus eveniet ratione temporibus aperiam harum alias officiis assumenda officia quibusdam deleniti eos cupiditate dolore doloribus! officia quibusdam deleniti eos cupiditate dolore doloribus!</p>
+                  <div class="features-item__more"><a href="#">Learn more &rarr;</a></div>
+                </div>
+              </div>
+              <div class="features-item">
+                <div class="features-item__content">
+                  <h3 class="features-item__title">Easy collaboration</h3>
+                  <p class="features-item__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui dicta minus molestiae vel beatae natus eveniet ratione temporibus aperiam harum alias officiis assumenda officia quibusdam deleniti eos cupiditate dolore doloribus!</p>
+                  <div class="features-item__more"><a href="#">Learn more &rarr;</a></div>
+                </div>
+              </div>
+              <div class="features-item">
+                <div class="features-item__content">
+                  <h3 class="features-item__title">Electronic signatures</h3>
+                  <p class="features-item__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui dicta minus molestiae vel beatae natus eveniet ratione temporibus aperiam harum alias officiis assumenda officia quibusdam deleniti eos cupiditate dolore doloribus!</p>
+                  <div class="features-item__more"><a href="#">Learn more &rarr;</a></div>
+                </div>
+              </div>
+              <div class="features-item">
+                <div class="features-item__content">
+                  <h3 class="features-item__title">Advanced analytics</h3>
+                  <p class="features-item__text">PandaDoc you will know Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui dicta minus molestiae vel beatae natus eveniet ratione temporibus aperiam harum alias officiis assumenda officia quibusdam deleniti eos cupiditate dolore doloribus! officia quibusdam deleniti eos cupiditate dolore doloribus!</p>
+                  <div class="features-item__more"><a href="#">Learn more &rarr;</a></div>
+                </div>
               </div>
             </div>
-            <div class="promo__cards">
-              <div class="card">
-                <div class="card__content"><img class="card__icon" src="images/icons/icon-1.svg">
-                  <h3 class="card__title">Beautiful proposals that close fast</h3>
-                  <p class="card__text">PandaDoc is built for companies looking for a proposal software that helps them grow faster.</p>
-                </div><a class="card__link" href="#"></a>
+            <div class="features__tab js-tab" id="tab-2">
+              <div class="features-item">
+                <div class="features-item__content">
+                  <h3 class="features-item__title">Advanced Tab 2</h3>
+                  <p class="features-item__text">Tab 2 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui dicta minus molestiae vel beatae natus eveniet ratione temporibus aperiam harum alias officiis assumenda officia quibusdam deleniti eos cupiditate dolore doloribus!</p>
+                  <div class="features-item__more"><a href="#">Learn more &rarr;</a></div>
+                </div>
               </div>
-              <div class="card">
-                <div class="card__content"><img class="card__icon" src="images/icons/icon-2.svg">
-                  <h3 class="card__title">Full contract lifecycle management</h3>
-                  <p class="card__text">Save time and reduce errors during your contract management process with PandaDoc</p>
-                </div><a class="card__link" href="#"></a>
+              <div class="features-item">
+                <div class="features-item__content">
+                  <h3 class="features-item__title">Easy Tab 2</h3>
+                  <p class="features-item__text">Tab 2 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui dicta minus molestiae vel beatae natus eveniet ratione temporibus aperiam harum alias officiis assumenda officia quibusdam deleniti eos cupiditate dolore doloribus!</p>
+                  <div class="features-item__more"><a href="#">Learn more &rarr;</a></div>
+                </div>
               </div>
-            </div>
-            <div class="promo__partners"><img class="promo__partners-item" src="images/logos/hubspot.svg" alt="hubspot"><img class="promo__partners-item" src="images/logos/segment.svg" alt="segment"><img class="promo__partners-item" src="images/logos/pubnub.svg" alt="pubnub"><img class="promo__partners-item" src="images/logos/datanyze.svg" alt="datanyze">
-            </div>
-          </section>
-          <section class="features">
-            <h2 class="features__title"></h2>
-            <div class="features__list">
-              <ul class="tabs">
-                <li></li>
-              </ul>
-            </div>
-            <div class="features__content">
-              <div class="features__item">
-                <h3>Advanced</h3>
-                <p>lorem</p>
+              <div class="features-item">
+                <div class="features-item__content">
+                  <h3 class="features-item__title">Electronic Tab 2</h3>
+                  <p class="features-item__text">Tab 2 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui dicta minus molestiae vel beatae natus eveniet ratione temporibus aperiam harum alias officiis assumenda officia quibusdam deleniti eos cupiditate dolore doloribus!</p>
+                  <div class="features-item__more"><a href="#">Learn more &rarr;</a></div>
+                </div>
               </div>
-              <div class="features__item">
-                <h3>Easy</h3>
-                <p>lorem</p>
-              </div>
-              <div class="features__item">
-                <h3>Electronic</h3>
-                <p>lorem</p>
-              </div>
-              <div class="features__item">
-                <h3>Adva</h3>
-                <p>lorem</p>
+              <div class="features-item">
+                <div class="features-item__content">
+                  <h3 class="features-item__title">Advanced Tab 2</h3>
+                  <p class="features-item__text">Tab 2 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui dicta minus molestiae vel beatae natus eveniet ratione temporibus aperiam harum alias officiis assumenda officia quibusdam deleniti eos cupiditate dolore doloribus!</p>
+                  <div class="features-item__more"><a href="#">Learn more &rarr;</a></div>
+                </div>
               </div>
             </div>
-          </section>
-          <section class="contact">
+            <div class="features__tab js-tab" id="tab-3">
+              <div class="features-item">
+                <div class="features-item__content">
+                  <h3 class="features-item__title">Advanced Tab 3</h3>
+                  <p class="features-item__text">Tab 3 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui dicta minus molestiae vel beatae natus eveniet ratione temporibus aperiam harum alias officiis assumenda officia quibusdam deleniti eos cupiditate dolore doloribus!</p>
+                  <div class="features-item__more"><a href="#">Learn more &rarr;</a></div>
+                </div>
+              </div>
+              <div class="features-item">
+                <div class="features-item__content">
+                  <h3 class="features-item__title">Easy Tab 3</h3>
+                  <p class="features-item__text">Tab 3 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui dicta minus molestiae vel beatae natus eveniet ratione temporibus aperiam harum alias officiis assumenda officia quibusdam deleniti eos cupiditate dolore doloribus!</p>
+                  <div class="features-item__more"><a href="#">Learn more &rarr;</a></div>
+                </div>
+              </div>
+              <div class="features-item">
+                <div class="features-item__content">
+                  <h3 class="features-item__title">Electronic Tab 3</h3>
+                  <p class="features-item__text">Tab 3 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui dicta minus molestiae vel beatae natus eveniet ratione temporibus aperiam harum alias officiis assumenda officia quibusdam deleniti eos cupiditate dolore doloribus!</p>
+                  <div class="features-item__more"><a href="#">Learn more &rarr;</a></div>
+                </div>
+              </div>
+              <div class="features-item">
+                <div class="features-item__content">
+                  <h3 class="features-item__title">Advanced Tab 3</h3>
+                  <p class="features-item__text">Tab 3 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui dicta minus molestiae vel beatae natus eveniet ratione temporibus aperiam harum alias officiis assumenda officia quibusdam deleniti eos cupiditate dolore doloribus!</p>
+                  <div class="features-item__more"><a href="#">Learn more &rarr;</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="contact">
+          <div class="contact__row">
             <div class="contact__column">
-              <h2 class="contact__title">Keep in touch</h2>
+              <h2 class="contact__title">Keep in touch!</h2>
               <p class="contact__text">Feel free to contact us with questions, potential partnerships, media inquiries, or just say "Hi!"</p>
               <p class="contact__text">To keep up to date with PandaDoc, check out <a href="#">our blog</a></p>
             </div>
@@ -102,55 +176,67 @@
                 </fieldset>
               </form>
             </div>
-          </section>
+          </div><img class="contact__image" src="images/images/footer.png">
+        </section>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="footer__content">
+        <div class="footer__row footer__columns">
+              <div class="footer__column"><strong class="footer__title">Products</strong>
+                <ul class="footer__list">
+                  <li class="footer__item"><a href="#">Proposal Software</a></li>
+                  <li class="footer__item"><a href="#">Contract Management</a></li>
+                  <li class="footer__item"><a href="#">Sales Enablement</a></li>
+                  <li class="footer__item"><a href="#">Electronic Signatures</a></li>
+                  <li class="footer__item"><a href="#">CPQ Software</a></li>
+                  <li class="footer__item"><a href="#">Features</a></li>
+                  <li class="footer__item"><a href="#">Integrations</a></li>
+                  <li class="footer__item"><a href="#">Security</a></li>
+                  <li class="footer__item"><a href="#">API &amp; SDK</a></li>
+                </ul>
+              </div>
+              <div class="footer__column"><strong class="footer__title">Templates</strong>
+                <ul class="footer__list">
+                  <li class="footer__item"><a href="#">Proposals</a></li>
+                  <li class="footer__item"><a href="#">Invoices</a></li>
+                  <li class="footer__item"><a href="#">Quotes</a></li>
+                  <li class="footer__item"><a href="#">Business Plans</a></li>
+                  <li class="footer__item"><a href="#">Receipts</a></li>
+                  <li class="footer__item"><a href="#">Standart Documents</a></li>
+                  <li class="footer__item"><a href="#">Other documents</a></li>
+                </ul>
+              </div>
+              <div class="footer__column"><strong class="footer__title">Resources</strong>
+                <ul class="footer__list">
+                  <li class="footer__item"><a href="#">Help center</a></li>
+                  <li class="footer__item"><a href="#">Webinars</a></li>
+                  <li class="footer__item"><a href="#">PandaDoc Academy</a></li>
+                  <li class="footer__item"><a href="#">Press</a></li>
+                  <li class="footer__item"><a href="#">Privacy policy</a></li>
+                  <li class="footer__item"><a href="#">Payment policy</a></li>
+                  <li class="footer__item"><a href="#">Terms of use</a></li>
+                  <li class="footer__item"><a href="#">Blog</a></li>
+                </ul>
+              </div>
         </div>
-      </main>
-      <footer class="footer">
-        <div class="footer__content">
-          <div class="footer__row">
-                  <div class="footer__column"><strong class="footer__title">Solutions</strong>
-                    <ul class="footer__list">
-                      <li class="footer__item"><a href="#">Proposal Software</a></li>
-                      <li class="footer__item"><a href="#">Contract Management</a></li>
-                      <li class="footer__item"><a href="#">Sales Enablement</a></li>
-                      <li class="footer__item"><a href="#">Electronic Signatures</a></li>
-                      <li class="footer__item"><a href="#">CPQ Software</a></li>
-                      <li class="footer__item"><a href="#">Features</a></li>
-                      <li class="footer__item"><a href="#">Integrations</a></li>
-                      <li class="footer__item"><a href="#">Security</a></li>
-                      <li class="footer__item"><a href="#">API &amp; SDK</a></li>
-                    </ul>
-                  </div>
-                  <div class="footer__column"><strong class="footer__title">Templates</strong>
-                    <ul class="footer__list">
-                      <li class="footer__item"><a href="#">Proposals</a></li>
-                      <li class="footer__item"><a href="#">Invoices</a></li>
-                      <li class="footer__item"><a href="#">Quotes</a></li>
-                      <li class="footer__item"><a href="#">Business plans</a></li>
-                      <li class="footer__item"><a href="#">Receipts</a></li>
-                      <li class="footer__item"><a href="#">Standard documents</a></li>
-                      <li class="footer__item"><a href="#">Other documents</a></li>
-                    </ul>
-                  </div>
-                  <div class="footer__column"><strong class="footer__title">Resources</strong>
-                    <ul class="footer__list">
-                      <li class="footer__item"><a href="#">Help center</a></li>
-                      <li class="footer__item"><a href="#">Webinars</a></li>
-                      <li class="footer__item"><a href="#">PandaDoc Academy</a></li>
-                      <li class="footer__item"><a href="#">Press</a></li>
-                      <li class="footer__item"><a href="#">Privacy policy</a></li>
-                      <li class="footer__item"><a href="#">Payment policy</a></li>
-                      <li class="footer__item"><a href="#">Terms of use</a></li>
-                      <li class="footer__item"><a href="#">Blog</a></li>
-                    </ul>
-                  </div>
-          </div>
-          <div class="footer__row">
-            <div class="app-links"><a class="app-links__link" href="#"><img src="images/icons/btn-app-store.svg"></a><a class="app-links__link" href="#"><img src="images/icons/btn-google-play.svg"></a></div>
-            <div class="copyright"><span>PandaDoc</span><span>All rights reserved</span></div>
-          </div>
+        <div class="footer__row">
+          <div class="app-links"><a class="app-links__link" href="#"><img src="images/icons/btn-app-store.svg"></a><a class="app-links__link" href="#"><img src="images/icons/btn-google-play.svg"></a></div>
+          <div class="copyright"><span>PandaDoc &reg;</span><span>All rights reserved</span></div>
         </div>
-      </footer>
+      </div>
+    </footer>
+    <div class="modal-wrapper js-modal">
+      <div class="modal">
+        <div class="modal__content"><span class="modal__close js-modal-close">X</span>
+          <div class="modal__frame">
+            <h2 class="modal__title">Automate the signing <br/> process</h2>
+            <p class="modal__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui dicta minus molestiae vel beatae natus eveniet ratione temporibus aperiam harum alias officiis assumenda officia quibusdam deleniti eos cupiditate dolore doloribus!</p>
+            <p class="modal__text"><a>Next Feature &rarr;</a></p>
+          </div>
+          <div class="modal__image"><img src="images/images/dashboard.png"></div>
+        </div>
+      </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <script src="js/main.js"></script>

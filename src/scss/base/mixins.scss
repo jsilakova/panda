@@ -13,3 +13,9 @@
     @content;
   }
 }
+
+@mixin center-content() {
+  max-width: 962px;
+  padding: 0 20px;
+  margin: 0 auto;
+}

@@ -1,14 +1,16 @@
 .banner {
   display: flex;
+  width: 100%;
   justify-content: center;
-  padding: 13% 0 20%;
+  padding: 116px 0 184px;
 
   @include apply-to(less-than, $pc) {
-    padding: 8% 0 14%;
+    padding: 70px 0 110px;
   }
 
   @include apply-to(less-than, $tablet) {
     display: block;
+    padding-top: 54px;
     padding-bottom: 0;
 
     &:after {
@@ -26,16 +28,15 @@
       margin: 0;
       top: 0;
       right: -16%;
-      width: 130%;
+      width: 1150px;
       height: auto;
     }
 
     @include apply-to(less-than, $tablet) {
-      width: 640px;
+      width: 750px;
       position: static;
       float: right;
-      margin-left: -320px;
-      margin-right: -65px;
+      margin-right: -100px;
     }
   }
 
@@ -50,32 +51,55 @@
 
     @include apply-to(less-than, $tablet) {
       max-width: 100%;
+      margin-bottom: 15px;
     }
   }
 
   &__info {
     color: #82868b;
-    font-size: 16px;
-    padding-bottom: 8px;
-    margin-bottom: 10px;
+    padding-bottom: 6px;
+    margin-bottom: 12px;
     border-bottom: 2px solid #eaebf2;
+
+    @include apply-to(less-than, $mobile-landscape) {
+      margin-bottom: 14px;
+    }
   }
 
   &__title {
-    margin: 0 0 40px;
-    font: 45px/1.12em $second-font;
+    margin: 0 0 39px;
+    font: 40px/1.25em $main-font;
 
     @include apply-to(less-than, $pc) {
       font-size: 30px;
+      margin-bottom: 25px;
+    }
+
+    @include apply-to(less-than, $mobile-landscape) {
+      font-size: 22px;
+      margin-bottom: 16px;
     }
   }
 
   &__buttons {
     display: flex;
-    font: 17px/30px $main-font;
+    font: 15px/30px $second-font;
+
+    @include apply-to(less-than, $mobile-landscape) {
+      line-height: 22px;
+    }
 
     a {
-      margin-right: 10px;
+      margin-left: 10px;
+
+      &:first-child {
+        margin: 0;
+      }
+
+      @include apply-to(less-than, $mobile-landscape) {
+        padding: 8px 10px 5px;
+        min-width: 112px;
+      }
     }
   }
 }

@@ -5,6 +5,7 @@ var sass            = require('gulp-sass');
 var sourcemaps      = require('gulp-sourcemaps');
 var autoprefixer    = require('gulp-autoprefixer');
 var pug             = require('gulp-pug');
+var fs              = require('file-system');
 var imagemin        = require('gulp-imagemin');
 var browserSync     = require('browser-sync');
 
@@ -30,7 +31,7 @@ gulp.task('sass', function () {
     .pipe(sourcemaps.init())
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer({
-      browsers: ['last 2 version'],
+      browsers: ['ie >= 10', 'last 2 version'],
       cascade: false,
     }))
     .pipe(sourcemaps.write())
@@ -41,7 +42,10 @@ gulp.task('sass', function () {
 gulp.task('pug', function () {
   return gulp
     .src(src.pug + '*.pug')
-    .pipe(pug({ pretty: true }))
+    .pipe(pug({
+      pretty: true,
+      locals: Object.assign(JSON.parse(fs.readFileSync('features.json'))),
+    }).on('error', (e) => console.log(e.toString())))
     .pipe(gulp.dest(dest.html))
     .pipe(browserSync.reload({ stream: true }));
 });
